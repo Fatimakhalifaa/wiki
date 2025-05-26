@@ -1,5 +1,5 @@
 ## Running a campaign:
-##### Example:
+#### Example:
 ```shell
 With icaruscode v10_06_00_01 available, we are now ready to start the data production testing. To get started,
 I'd ask that we start by processing the files in the sam definition gputnam_2025AProductionTest_9435_BNBMajroity
@@ -8,7 +8,7 @@ stage0_run2_wcdnn_icarus.fcl
 stage1_run2_icarus.fcl
 cafmakerjob_icarus_data.fcl
 ```
-##### Steps:
+#### Steps:
 1. Clone a similar campaign
 2. Go to GUI editor
 
@@ -21,8 +21,10 @@ cafmakerjob_icarus_data.fcl
    ###### Campaign Stages:
    
    ###### Stage0:
+   ```shell
    name: stage0_onbeam
    dataset: gputnam_2025AProductionTest_9435_BNBMajroity
+   ```
    
    ####### param_override:
    stage: stage0_onbeam
@@ -54,7 +56,10 @@ cafmakerjob_icarus_data.fcl
    sample: Icaruspro_2025_wcdnn
    prodtype: gputnam_9435
    
-   
+#### Path to the config file:   
+```shell
+/exp/icarus/app/poms_test/pr_cfg_numi/run2_rep_POT_promita.cfg
+```
 
 ## icaruspro
 ```shell
