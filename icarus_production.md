@@ -1,13 +1,12 @@
 ## Running a campaign:
 #### Example:
-```shell
 With icaruscode v10_06_00_01 available, we are now ready to start the data production testing. To get started,
 I'd ask that we start by processing the files in the sam definition gputnam_2025AProductionTest_9435_BNBMajroity
 through the following workflow:
 stage0_run2_wcdnn_icarus.fcl
 stage1_run2_icarus.fcl
 cafmakerjob_icarus_data.fcl
-```
+
 #### Steps:
 1. Clone a similar campaign
 2. Go to GUI editor
@@ -28,7 +27,7 @@ cafmakerjob_icarus_data.fcl
    dataset: gputnam_2025AProductionTest_9435_BNBMajroity
    ```
    
-   ####### param_override:
+   ###### param_override:
    ```shell
    stage: stage0_onbeam
    streamname: bnbmajority
@@ -47,8 +46,10 @@ cafmakerjob_icarus_data.fcl
    ```shell
    name: POT_stage1_caf_larcv_stage1onDisk
    dataset: gputnam_2025AProductionTest_9435_BNBMajroity
+   ```
    
-   ####### param_override:
+   ###### param_override:
+   ```shell
    stage: POT_stage1_caf_larcv_stage1onDisk
    streamname: bnbmajority
    streaminfo: bnb
