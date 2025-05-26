@@ -1,11 +1,11 @@
 ## Running a campaign:
 #### Example:
-With icaruscode v10_06_00_01 available, we are now ready to start the data production testing. To get started,
-I'd ask that we start by processing the files in the sam definition gputnam_2025AProductionTest_9435_BNBMajroity
-through the following workflow:
+With icaruscode ``v10_06_00_01`` available, we are now ready to start the data production testing. To get started,
+I'd ask that we start by processing the files in the sam definition ``gputnam_2025AProductionTest_9435_BNBMajroity``
+``through the following workflow:
 stage0_run2_wcdnn_icarus.fcl
 stage1_run2_icarus.fcl
-cafmakerjob_icarus_data.fcl
+cafmakerjob_icarus_data.fcl``
 
 #### Steps:
 Clone a similar campaign then go to GUI editor:
