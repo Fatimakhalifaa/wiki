@@ -15,8 +15,10 @@ cafmakerjob_icarus_data.fcl
    It's better to remove dependencies
    
    ###### Update:
-   name: yearA_experiment_RunNo_version_something-intuitive  , e.g. 2025A_ICARUS__BNB_Run9435_v10_VAL 
+   ```shell
+   name: yearA_experiment_RunNo_version_something-intuitive  , e.g. 2025A_ICARUS__BNB_Run9435_v10_VAL
    software_version: v10_06_00_01
+   ```
 
    ###### Campaign Stages:
    
@@ -27,6 +29,7 @@ cafmakerjob_icarus_data.fcl
    ```
    
    ####### param_override:
+   ```shell
    stage: stage0_onbeam
    streamname: bnbmajority
    campaign: 2025_ICARUS__BNB_Run9435_v10_VAL
@@ -38,8 +41,10 @@ cafmakerjob_icarus_data.fcl
                      /%(experiment)s_%(sample)s/%(version)s/% (streamname)s/stage0/``
    sample: Icaruspro_2025_wcdnn
    prodtype: gputnam_9435
+   ```
 
    ###### Stage1:
+   ```shell
    name: POT_stage1_caf_larcv_stage1onDisk
    dataset: gputnam_2025AProductionTest_9435_BNBMajroity
    
@@ -55,6 +60,7 @@ cafmakerjob_icarus_data.fcl
                        (version)s/bnbmajority/stage1_9435/``
    sample: Icaruspro_2025_wcdnn
    prodtype: gputnam_9435
+   ```
    
 #### Path to the config file:   
 ```shell
