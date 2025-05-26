@@ -59,6 +59,7 @@ Ojob_output.dest: /pnfs/icarus/scratch/users/icaruspro/dropbox/data/poms_product
 sample: Icaruspro_2025_wcdnn
 prodtype: gputnam_9435
 ```
+
 #### Submit a test:
 ```shell
 split_type: limitn --> 20
