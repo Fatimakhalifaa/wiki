@@ -10,13 +10,13 @@ through the following workflow:
 #### Steps:
 Clone a similar campaign then go to GUI editor:
    
-###### Update:
+##### Update:
 ```shell
  name: yearA_experiment_RunNo_version_something-intuitive  , e.g. 2025A_ICARUS__BNB_Run9435_v10_VAL
  software_version: v10_06_00_01
 ```
 
-###### Campaign Stages:
+##### Campaign Stages:
    
 ###### Stage0:
 ```shell
@@ -58,6 +58,10 @@ Ojob_output.dest: /pnfs/icarus/scratch/users/icaruspro/dropbox/data/poms_product
                        (version)s/bnbmajority/stage1_9435/
 sample: Icaruspro_2025_wcdnn
 prodtype: gputnam_9435
+```
+#### Submit a test:
+```shell
+split_type: limitn --> 20
 ```
    
 #### Path to the config file:   
