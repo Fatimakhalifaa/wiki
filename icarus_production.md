@@ -81,7 +81,7 @@ samweb -e icarus list-definition-files gputnam_2025AProductionTest_9384_BNBMajro
 ```
 
 ## Delete the files
-After running a campaign, delete the files that are saved in ``/pnfs/sbn/data`` using samweb:
+After running a campaign, delete the files that are saved in ``/pnfs/sbn/data/sbn_fd`` using samweb:
 ```shell
 # set up the following dependencies via Spack
 source /cvmfs/fermilab.opensciencegrid.org/packages/common/setup-env.sh
