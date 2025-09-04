@@ -73,6 +73,8 @@ split_type: limitn --> 20
 ## icaruspro
 ```shell
 # login
+icaruspro@icarusgpvm03.fnal.gov
+# ??
 ssh faabdalr@icarusprodgpvm01.fnal.gov
 
 # list definition files example
