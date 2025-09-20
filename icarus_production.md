@@ -63,9 +63,13 @@ prodtype: gputnam_9435
 #### Submit a test:
 ```shell
 split_type: limitn --> 20
+
+# For data add the last two lines in the testparamoverrides
+-Osubmit.n_files_per_job=-1
+-Oglobal.nevt=1
 ```
    
-#### Path to the config file:   
+## Path to the config file:   
 ```shell
 /exp/icarus/app/poms_test/pr_cfg_numi/run2_rep_POT_promita.cfg
 ```
@@ -74,16 +78,13 @@ split_type: limitn --> 20
 ```shell
 # login
 icaruspro@icarusgpvm03.fnal.gov
+
 # ??
 ssh faabdalr@icarusprodgpvm01.fnal.gov
 
-# list definition files example
-samweb -e icarus list-definition-files gputnam_2025AProductionTest_9384_BNBMajroity
-
 ```
 
-## Delete the files
-After running a campaign, delete the files that are saved in ``/pnfs/sbn/data/sbn_fd`` using samweb:
+### samweb commands
 ```shell
 # set up the following dependencies via Spack
 source /cvmfs/fermilab.opensciencegrid.org/packages/common/setup-env.sh
@@ -92,12 +93,17 @@ spack load fife-utils@3.7.4 os=fe
 # count the files
 samweb -e icarus count-files "defname:<defname>"
 
+# count poms tasks files
+poms_depends_<subID>_1 
+example: poms_depends_2844947_1
+
 # list the files
 samweb -e icarus list-files "defname:<defname>"
 samweb -e icarus list-files --summary "defname:<defname>"
 
-# delete the files
+# list definition files example
+samweb -e icarus list-definition-files gputnam_2025AProductionTest_9384_BNBMajroity
+
+# delete the files: after running a campaign, delete the files that are saved in `/pnfs/sbn/data/sbn_fd`:
 sam_retire_dataset -e icarus --name <defname>
 ```
-
-
