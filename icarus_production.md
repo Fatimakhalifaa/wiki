@@ -115,6 +115,6 @@ sam_retire_dataset -e icarus --name <defname>
 httokensh -v --vaulttokenfile=/tmp/vt_u52624 --vaulttokenttl=6d  -- /bin/bash (icaruspro)
 samweb -e icarus prestage-dataset --touch --parallel=5 --defname=dataset_name 
 
-# chech SAM project status
+# check SAM project status
 https://samicarus.fnal.gov:8483/station_monitor/icarus/stations/icarus/projects
 ```
