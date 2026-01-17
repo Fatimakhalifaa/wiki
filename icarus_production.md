@@ -90,6 +90,10 @@ ssh faabdalr@icarusprodgpvm01.fnal.gov
 source /cvmfs/fermilab.opensciencegrid.org/packages/common/setup-env.sh
 spack load fife-utils@3.7.4 os=fe
 
+# token shell
+httokensh -v --vaulttokenfile=/tmp/vt_u52624 --vaulttokenttl=6d  -- /bin/bash (icaruspro)
+httokensh -v -a htvaultprod.fnal.gov -i icarus -- /bin/bash (users)
+
 # count the files
 samweb -e icarus count-files "defname:<defname>"
 
@@ -106,4 +110,11 @@ samweb -e icarus list-definition-files gputnam_2025AProductionTest_9384_BNBMajro
 
 # delete the files: after running a campaign, delete the files that are saved in `/pnfs/sbn/data/sbn_fd`:
 sam_retire_dataset -e icarus --name <defname>
+
+# prestage raw data files from tape
+httokensh -v --vaulttokenfile=/tmp/vt_u52624 --vaulttokenttl=6d  -- /bin/bash (icaruspro)
+samweb -e icarus prestage-dataset --touch --parallel=5 --defname=dataset_name 
+
+# chech SAM project status
+https://samicarus.fnal.gov:8483/station_monitor/icarus/stations/icarus/projects
 ```
