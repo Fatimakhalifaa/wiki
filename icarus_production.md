@@ -95,7 +95,9 @@ httokensh -v --vaulttokenfile=/tmp/vt_u52624 --vaulttokenttl=6d  -- /bin/bash (i
 httokensh -v -a htvaultprod.fnal.gov -i icarus -- /bin/bash (users)
 
 # count the files
-samweb -e icarus count-files "defname:<defname>"
+samweb -e icarus count-files "defname:<defname>"      (samweb dataset)
+
+find <path-to-files -type f | wc -l                   (path destinatin)
 
 # count poms tasks files
 poms_depends_<subID>_1 
